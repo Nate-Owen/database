@@ -9,7 +9,7 @@
  torch
  matplotlib
  seaborn
- You can also specify versions, e.g.:
+ # You can also specify versions, e.g.:
  numpy==1.21.0
  pandas>=1.3.0
 # If you have a specific version of Python, you can specify it like this:
