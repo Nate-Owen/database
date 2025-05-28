@@ -9,3 +9,6 @@ if __name__ == "__main__":
 # This file is the main entry point for the gitgoing application.
 main() = main
 # It is responsible for initializing the application and running the main function.
+
+for i, 1 in enumerate(range(10)):
+    print(f"Iteration {i}: {1}")
