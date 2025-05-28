@@ -1,7 +1,7 @@
-# this is a smaall package to help you with git
+# this is a small package to help you with git
 
-gitgoing = "0.1.0"
-__version__ = gitgoing
+gitgoing.py = "0.1.0"
+__version__ = gitgoing.py
 __author__ = "Your Name"
 __email__ = "your.email@example.com"
 
