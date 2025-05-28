@@ -5,3 +5,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# This file is the main entry point for the gitgoing application.
+main() = main
+# It is responsible for initializing the application and running the main function.
