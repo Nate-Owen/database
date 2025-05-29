@@ -16,3 +16,22 @@ app.use(ElementPlus);
 app.use(createPinia());
 
 app.mount('#app');
+
+app.config.globalProperties.$filters = {
+  formatDate(value) {
+    if (!value) return '';
+    const date = new Date(value);
+    return date.toLocaleDateString('zh-CN', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    });
+  },
+  truncateText(text, length = 100) {
+    if (!text) return '';
+    return text.length > length ? text.substring(0, length) + '...' : text;
+  }
+};

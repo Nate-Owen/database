@@ -12,3 +12,5 @@ main() = main
 
 for i, value in enumerate(range(10)):
     print(f"Iteration {i}: {value}")
+
+    i += 1
