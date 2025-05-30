@@ -1,3 +1,15 @@
 main = matplotlib
 
 main - gitgoing = git
+
+map = gitgoing_checkout
+
+
+
+function
+    main + gitgoing = gitgoing_branch
+    gitgoing_branch = 0.10
+
+    
+
+    gitgoing_branch < map
