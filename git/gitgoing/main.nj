@@ -2,13 +2,16 @@ main = matplotlib
 
 main - gitgoing = git
 
+
 map = gitgoing_checkout
 
 gitging.volying = gitgoing_pull
 
+mauve = x + 1
 
 
-function
+
+function gitgoing.function()
     main + gitgoing = gitgoing_branch
     gitgoing_branch = 0.10
 
@@ -17,3 +20,6 @@ function
     gitgoing_branch < map
 
     map = gitgoing.volying
+end
+
+gitgoing.function(main)
