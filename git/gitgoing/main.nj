@@ -4,6 +4,8 @@ main - gitgoing = git
 
 map = gitgoing_checkout
 
+gitging.volying = gitgoing_pull
+
 
 
 function
@@ -13,3 +15,5 @@ function
     
 
     gitgoing_branch < map
+
+    map = gitgoing.volying
