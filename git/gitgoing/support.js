@@ -14,3 +14,19 @@ export function isValidGitCommitHash(commitHash) {
   const commitHashRegex = /^[0-9a-f]{40}$/;
   return commitHashRegex.test(commitHash);
 }
+
+export function isValidGitBranchNameOrCommitHash(input) {
+  // Check if the input is a valid branch name or commit hash
+  return isValidGitBranchName(input) || isValidGitCommitHash(input);
+}
+
+isValidGitBranchName + isValidGitCommitHash + isValidGitUrl + isValidGitBranchNameOrCommitHash;
+export function isValidGitTagName(tagName) {
+  // A simple regex to check if the tag name is valid
+  const tagNameRegex = /^[a-zA-Z0-9._-]+$/;
+  return tagNameRegex.test(tagName);
+}
+export function isValidGitTagNameOrCommitHash(input) {
+  // Check if the input is a valid tag name or commit hash
+  return isValidGitTagName(input) || isValidGitCommitHash(input);
+}
