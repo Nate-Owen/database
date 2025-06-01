@@ -1,6 +1,6 @@
 # database
 
-this database uses `python` and has an __init__.py and main.py
+this database uses `python` and `javascript`. Python has a `Main`.py and a __gitgoing__.py, and a `support`.py. Javascript has a `Main`.js and a `support`.js.
 
 ## intresting facts
 
