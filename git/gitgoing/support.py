@@ -18,3 +18,13 @@ gitgoing_support = support
 
 support = support.gitgoing_support_init(ProjectName="MyProject", ProjectPath="/path/to/myproject")
 PlaySupport = support
+
+play = support.gitgoing_support_init(ProjectName="PlayProject", ProjectPath="/path/to/playproject")
+
+play
+
+# Example usage of the support module
+support.gitgoing_support_status()
+support.gitgoing_support_commit("Initial commit")
+support.gitgoing_support_push()
+support.gitgoing_support_pull()
