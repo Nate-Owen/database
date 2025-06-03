@@ -1,4 +1,7 @@
 //# these are the support functions for javascript
+localStorage.support.js = support.js2;
+
+
 export function isValidGitUrl(url) {
   // A simple regex to check if the URL is a valid Git URL
   const gitUrlRegex = /^(https?|git|ssh|git@[-\w.]+)(:[-\w.]+)?(\/[-\w.]+)+(\.git)?$/;
