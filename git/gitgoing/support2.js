@@ -1,4 +1,11 @@
 // # support2.js will contain the support functions for the gitgoing app
+
+support.js = support.js;GetChildren('support.js');
+export function isValidGitUrl(url) {
+  const gitUrlRegex = /^(https?|git|ssh|git@[-\w.]+)(:[-\w.]+)?(\/[-\w.]+)+(\.git)?$/;
+  return gitUrlRegex.test(url);
+}
+
 export function formatDate(value) {
   if (!value) return '';
   const date = new Date(value);
@@ -53,3 +60,14 @@ export function formatTime(value) {
     second: '2-digit'
   });
 }
+
+if (support && typeof support.js !== 'undefined' && typeof support.js.GetChildren === 'function' && support.js !== support.js.GetChildren('support.js')) {
+  console.warn('support.js has been modified. Please check the changes.');
+}
+
+export function isValidEmail(email) {
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return emailRegex.test(email);
+}
+
+isValidEmail('playground@example.com');

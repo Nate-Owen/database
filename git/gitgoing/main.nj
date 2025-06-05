@@ -29,3 +29,13 @@ end
 gitgoing.function(main)
 
 gitgoing.function(main) = main.gitgoing
+
+add numpy
+
+numpy = number(1, 1000)
+
+
+numpy = numpy()
+
+play numpy(100)
+
