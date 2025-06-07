@@ -54,5 +54,8 @@ jobs:
 
       play: NodeJS
 
-          print("blabalas")
+      var  a = print("blabalas")
+
+
+      play: a
 
