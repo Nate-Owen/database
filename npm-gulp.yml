@@ -45,5 +45,44 @@ jobs:
         name: logs
         path: logs/ # Adjust the path as necessary
 
-        name: Upload Node.js version
     - name: Upload Node.js version
+      run: echo "Node.js version: $(node -v)" > node-version.txt
+      uses: actions/upload-artifact@v4
+      with:
+        name: node-version
+        path: node-version.txt
+
+    - name: Notify on success
+      if: success()
+      run: echo "Build and tests completed successfully."
+    - name: Notify on failure
+      if: failure()
+      run: echo "Build or tests failed. Please check the logs for details."
+    - name: Post build cleanup
+      if: always()
+      run: |
+        echo "Cleaning up build artifacts..."
+        rm -rf build/
+        rm -rf coverage/
+        rm -rf logs/
+        echo "Cleanup completed."
+    - name: Cache Node.js modules
+      uses: actions/cache@v4
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+
+          - name: Cache Gulp
+            uses: actions/cache@v4
+            with:
+              path: ~/.gulp
+              key: ${{ runner.os }}-gulp-${{ hashFiles('**/gulpfile.js') }}
+              restore-keys: |
+                ${{ runner.os }}-gulp-
+
+    - name: Cache Gulp tasks
+
+    
