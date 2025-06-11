@@ -1,0 +1,10 @@
+while machine learning model play,
+
+    v = play: "a"
+
+    after v,
+
+    if v not play then
+        play "hi, it is nice to meet you"
+    end
+end
