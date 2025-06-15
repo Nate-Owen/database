@@ -33,3 +33,10 @@ export function isValidGitTagNameOrCommitHash(input) {
   // Check if the input is a valid tag name or commit hash
   return isValidGitTagName(input) || isValidGitCommitHash(input);
 }
+
+
+export function isValidGitRemoteName(remoteName) {
+  // A simple regex to check if the remote name is valid
+  const remoteNameRegex = /^[a-zA-Z0-9._-]+$/;
+  return remoteNameRegex.test(remoteName);
+}
