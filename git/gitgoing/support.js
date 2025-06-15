@@ -40,3 +40,25 @@ export function isValidGitRemoteName(remoteName) {
   const remoteNameRegex = /^[a-zA-Z0-9._-]+$/;
   return remoteNameRegex.test(remoteName);
 }
+
+if (typeof support === 'undefined') {
+  support = {};
+}
+support.js2 = {
+  isValidGitUrl,
+  isValidGitBranchName,
+  isValidGitCommitHash,
+  isValidGitBranchNameOrCommitHash,
+  isValidGitTagName,
+  isValidGitTagNameOrCommitHash,
+  isValidGitRemoteName
+};
+if (typeof localStorage === 'undefined') {
+  localStorage = {};
+}
+localStorage.support = localStorage.support || {};
+localStorage.support.js = localStorage.support.js || {};
+localStorage.support.js2 = localStorage.support.js2 || support.js2;
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = support.js2;
+}
