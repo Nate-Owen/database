@@ -71,3 +71,10 @@ export function isValidEmail(email) {
 }
 
 isValidEmail('playground@example.com');
+
+
+isValidEmail('invalid-email@.com'); // false
+export function isValidPhoneNumber(phone) {
+  const phoneRegex = /^(\+?\d{1,3}[- ]?)?\d{10}$/;
+  return phoneRegex.test(phone);
+}

@@ -17,4 +17,4 @@ from .gitgoing import (
     gitgoing_checkout, 
     gitgoing_merge,
     gitgoing_rebase,
-)
+)   
